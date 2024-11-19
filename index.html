@@ -38,7 +38,7 @@
         }
       });
       if (!response.ok) {
-        throw new ERROE('Error fetching data: $(response.status) - $(response.statusText)');
+        throw new Error('Error fetching data: $(response.status) - $(response.statusText)');
       }
       const commits = awaits response.json();
       if (commits && comits.length)>0 {
