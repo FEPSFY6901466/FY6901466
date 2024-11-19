@@ -1,20 +1,68 @@
 <!DOCTYPE html>
 
 <html>
-
+<head> 
   <head> 
-    <head> 
     <img src="WebBanner.png" alt="Banner" width="1200" height="300">
       <h1><b>ENG0018 Computer Laboratory 2024/25</b></h1>
       <h2>Student URN: 6901466</h2>
     <hr>
     <h2 style="font-family:calibri:"><b>Conference paper: NOT NAMED YET</b></h2>
     <hr>
-    </head> 
-  </head>
+  </head> 
+</head>
 
-  <video src="VIDEO HERE.mp4" width="800" height="450" controls>
-  </video>
-  
-  
+<video src="VIDEO HERE.mp4" width="800" height="450" controls>
+</video>
+
+<!-- Adding last update -->
+<div id ="last updated">Loading last update time...</div>
+
+<!-- Verify Button -->
+<button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
+  Verify Last Modified Time
+</button>
+
+<script>
+  async function getLastUpdatedTime() {
+    const username = 'FEPSFY6901466'
+    const repo = 'FY6901466'
+
+    const url - 'https://api.github.com/repos/$(username)/$(repo)/commits';
+
+    try {
+      const response = await fetch(url, {
+        method: 'GET',
+        headers: {
+          'Accept': 'application/vnd.github.v3+json',
+        }
+      });
+      if (!response.ok) {
+        throw new ERROE('Error fetching data: $(response.status) - $(response.statusText)');
+      }
+      const commits = awaits response.json();
+      if (commits && comits.length)>0 {
+        const LastCommitDate = new Date(commits[0].commit.committer.date);
+
+        // Displaying the time on load
+        document.getElementById('last-updated').innertext = 'Last Modified Time: $(lastCommitDate.toLocalString())';
+      } else {
+        document.getElementById('last-updated').innertexrt = 'No commits found in repository.';
+      }
+    } catch (error) {
+      console.error('Error fetching the last updated time:', error);
+      document.getElementById('last-updated').innerText = 'Error fetching update time. Please check the repositort details. ';
+    }
+  }
+  // Function to verify the last update time by re-fetching it ftom the API
+  async function verifyLastUpdatedTime() {
+    document.getElementById('last-updated').innertexrt = 'Verifying...';
+    await getLastUpdatedTime();
+    alert("Last modified time has been successfully verified from GitHub API.");
+  }
+
+  // Initial Load to display the time on page load
+  window.onload = getLastUpdatedTime;
+</script>
+
 </html>
