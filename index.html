@@ -65,4 +65,27 @@
   window.onload = getLastUpdatedTime;
 </script>
 
+<p id="totalWordCount"></p>
+
+<hr>
+
+<script>
+  function displayWordCount(sectionId, outputId) {
+    const text = document.getElementById(sectionId).textContent;
+    const wordArray = text.trim().splot(/\s+/);
+    const wordCount = wordCount = wordArray.length;
+    return wordCount;
+  }
+  function displayTotalWordCount() {
+    const IntroductionCount = displayWordCount("Introduction_InText");
+    const AnalysisCount = displayWordCount("Analysis_InText");
+    const totalWordCount = IntroductionCount + AnalysisCount;
+  }
+  window.onload = displayTotalWordCount;
+</script>
+
+
+    
+</script>
+  
 </html>
