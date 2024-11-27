@@ -83,7 +83,9 @@
 <p class="ex1">
   <h3 id="Abstract">   Abstract</h3>
   <pre>
-       This article is an informative look at alternatives to traditional standing wind turbines and how BATs can be used in the future for sustainable energy. Evaluating each source of energy through different aspects of cost, impact, efficiency, and usefulness. 
+       This article is an informative look at alternatives to traditional standing wind turbines and how
+       BATs can be used in the future for sustainable energy. Evaluating each source of energy through 
+       different aspects of cost, impact, efficiency, and usefulness. 
   </pre>
 </p>
 <hr>
@@ -95,9 +97,16 @@
 <p class="ex1">
   <h3 id="1 What is it?">   1 What is it?</h3>
   <pre>
-       Since 2015, onshore wind energy has been banned in the UK. The ban was only lifted in July 2024, (GOV.UK (2024)), which begs the question of why it was banned in the first place and whether there are any better alternatives.
-       I first learned about Buoyant Airborne Turbines (BAT) through an article in Wind Systems magazine. The article said that BATs could reach heights where winds are stronger and more consistent, (staff, W.S. (2017)). So, I decided to investigate the BAT and traditional free-standing turbines to see if the UK should pivot towards using them.
+       Since 2015, onshore wind energy has been banned in the UK. The ban was only lifted in July 2024,
+       (GOV.UK (2024)), which begs the question of why it was banned in the first place and whether there
+       are any better alternatives. 
+    
+       I first learned about Buoyant Airborne Turbines (BAT) through an article in Wind Systems magazine.
+       The article said that BATs could reach heights where winds are stronger and more consistent, (staff, W.S. (2017)).
+       So, I decided to investigate the BAT and traditional free-standing turbines to see if the UK should
+       pivot towards using them.
   </pre>
+  <img src="BATPIC.png" alt="Picture of the BAT" width="300" height="200">
 </p>  
 <hr>
 
@@ -204,10 +213,10 @@
   // Function to calculate and display total word count from selected sections
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
-    const IntroductionCount = displayWordCount("Introduction_InText");
-    const AnalysisCount = displayWordCount("Analysis_InText");
+    const WordCount1 = displayWordCount("1 What is it?");
+    const WordCount2 = displayWordCount("1.1 Evaluating cost");
     // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + AnalysisCount;
+    const totalWordCount = WordCount1 + WordCount2;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
