@@ -112,7 +112,7 @@
   
 <p class="ex1">
   <h3 id="1_What_is_it?"> 1 What is it?</h3>
-  <pre>
+  <pre id="1">
        Since 2015, onshore wind energy has been banned in the UK. The ban was only lifted in July 2024,
        (GOV.UK (2024)), which begs the question of why it was banned in the first place and whether there
        are any better alternatives. 
@@ -135,7 +135,7 @@
 
 <p class="ex1">
   <h3 id="1.1_Evaluating_cost"> 1.1 Evaluating cost</h3>
-  <pre>
+  <pre id="1.1">
        Initially, I started to look for how much each project cost. As stated in the magazine the BAT isn’t
        fully commercially available, costing around $1.3 million (£1 million as of Nov 2024) for an 
        eighteen-month project, this is a very massive cost compared to the standing turbine which comes to 
@@ -160,14 +160,14 @@
 
 <p class="ex1">
   <h3 id="1.2_Comparing_Power_Output"> 1.2 Comparing Power Output</h3>
-  <pre>
+  <pre id="1.2a">
        One fundamental point between the standing wind turbine and the BAT is the fact that they make power the
        same way. They work on the same simple principle: wind turns the propeller-like blades of a turbine around
        a rotor, which then spins a generator consequently producing electricity. The main difference is the height
        at which the two operate. 
   </pre>
   <img src="GRAPH1.jpg" alt="Picture of the first graph" width="300" height="200" class="center"> <img src="GRAPH2.png" alt="Picture of the second graph" width="300" height="200" class="center">
-  <pre> 
+  <pre id="1.2b"> 
     Limpinsel, M., Kuo, D. and Vijh, A. (2018)                                            Energy Matters. (2016)        
 
     As both the graphs show, between 0 and 10km, as the altitude increases the average windspeeds increase which 
@@ -191,13 +191,13 @@
   
 <p class="ex1">
   <h3 id="1.3_What_does_the_Uk_need?"> 1.3 What does the Uk need?</h3>
-  <pre>
+  <pre id="1.3a">
        The goal of energy sources is to as you think, to supply energy to the country and currently the UK we consume 
        around 287.13 billion kWh and produce 318.60 billion kWh, around 40% of which is from fossil fuels, making 30 
        million tons of CO2 every year.
   </pre>
   <img src="TABLE.png" alt="Picture of the Table" width="700" height="200" class="center">
-  <pre>
+  <pre id="1.3b">
     Worlddata.info. (2014)
 
     The BATs with an 8MW engine can make, over a period of 24hrs, 192000kWh which annually is 70176000 kWh. This means
@@ -216,7 +216,7 @@
 
 <p class="ex1">
   <h3 id="2_Conclusion"> 2 Conclusion</h3>
-  <pre>
+  <pre id="2">
       Overall, in my opinion, BATs are defiantly the future of renewable wind energy however due to slow progress that make 
       take some time, by then we may have already transitioned to full renewable energy as a country. So, I encourage everyone
       and the government to look into the turbines and potentially our cities may look greener. Personally, I do think the BATs
@@ -336,13 +336,15 @@
   // Function to calculate and display total word count from selected sections
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
-    const WordCount1 = displayWordCount("1_What_is_it?");
-    const WordCount2 = displayWordCount("1.1_Evaluating_cost");
-    const WordCount3 = displayWordCount("1.2_Comparing_Power_Output");
-    const WordCount4 = displayWordCount("1.3_What_does_the_Uk_need?");
-    const WordCount5 = displayWordCount("2_Conclusion");
+    const WordCount1 = displayWordCount("1");
+    const WordCount2 = displayWordCount("1.1");
+    const WordCount3 = displayWordCount("1.2a");
+    const WordCount4 = displayWordCount("1.2b");
+    const WordCount5 = displayWordCount("1.3a");
+    const WordCount6 = displayWordCount("1.3b");
+    const WordCount7 = displayWordCount("2");
     // Calculate the sum of all selected sections
-    const totalWordCount = WordCount1 + WordCount2 + WordCount3 + WordCount4 + WordCount5;
+    const totalWordCount = WordCount1 + WordCount2 + WordCount3 + WordCount4 + WordCount5 + WordCount6 + WordCount7;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
